@@ -1,0 +1,89 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="eGarden.Views.UsersRequestsPage"
+             Title="Request History"
+             BackgroundColor="#D6D3D1"
+             Shell.BackgroundColor="#A1A1AA">
+    <ScrollView>
+        <StackLayout>
+            <Label Text="Below are all Requests you made:"
+                   HorizontalTextAlignment="Center"
+                   FontAttributes="Bold"
+                   FontSize="22"
+                   Margin="5,10,5,10"/>
+            <ListView x:Name="requestsListView"
+                      ItemsSource="{Binding UsersRequests}"
+                      HasUnevenRows="True">
+                <ListView.ItemTemplate>
+                    <DataTemplate>
+                        <ViewCell>
+                            <StackLayout Padding="10" BackgroundColor="White" Spacing="5">
+                                <HorizontalStackLayout>
+                                    <Label Text="Maintenance: "/>
+                                    <Label Text="{Binding chosenMaintenance}"/>
+                                </HorizontalStackLayout>
+                                <HorizontalStackLayout>
+                                    <Label Text="Decoration: "/>
+                                    <Label Text="{Binding chosenDecoration}"/>
+                                </HorizontalStackLayout>
+                                <HorizontalStackLayout>
+                                    <Label Text="Layout: "/>
+                                    <Label Text="{Binding chosenLayout}"/>
+                                </HorizontalStackLayout>
+                                <HorizontalStackLayout>
+                                    <Label Text="Paymen method: "/>
+                                    <Label Text="{Binding paymentMethod}"/>
+                                </HorizontalStackLayout>
+                                <HorizontalStackLayout>
+                                    <Label Text="Agency Allowed to do all of the work freely: "/>
+                                    <Label Text="{Binding allowAgency}"/>
+                                </HorizontalStackLayout>
+                                <HorizontalStackLayout>
+                                    <Label Text="Planned Budget: "/>
+                                    <Label Text="{Binding plannedBudget}"/>
+                                    <Label Text=" $"/>
+                                </HorizontalStackLayout>
+                                <HorizontalStackLayout>
+                                    <Label Text="Status: "
+                                           FontSize="18"
+                                           FontAttributes="Bold"/>
+                                    <Label Text="{Binding status}"
+                                           FontSize="18"
+                                           FontAttributes="Bold"/>
+                                </HorizontalStackLayout>
+                                <HorizontalStackLayout>
+                                    <Label Text="City: "/>
+                                    <Label Text="{Binding city}"/>
+                                </HorizontalStackLayout>
+                                <HorizontalStackLayout>
+                                    <Label Text="Address: "/>
+                                    <Label Text="{Binding address}"/>
+                                </HorizontalStackLayout>
+                                <HorizontalStackLayout>
+                                    <Label Text="Country: "/>
+                                    <Label Text="{Binding country}"/>
+                                </HorizontalStackLayout>
+                                <HorizontalStackLayout>
+                                    <Label Text="Creation Date: "/>
+                                    <Label Text="{Binding creationDate}"/>
+                                </HorizontalStackLayout>
+                                <HorizontalStackLayout>
+                                    <Label Text="Price: "
+                                           FontSize="18"
+                                           FontAttributes="Bold"/>
+                                    <Label Text="{Binding price}"
+                                           FontSize="18"
+                                           FontAttributes="Bold"/>
+                                    <Label Text=" $" 
+                                           FontSize="18"
+                                           FontAttributes="Bold"/>
+                                </HorizontalStackLayout>
+                            </StackLayout>
+                        </ViewCell>
+                    </DataTemplate>
+                </ListView.ItemTemplate>
+            </ListView>
+        </StackLayout>
+    </ScrollView>
+</ContentPage>

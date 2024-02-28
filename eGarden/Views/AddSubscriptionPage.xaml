@@ -1,0 +1,85 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="eGarden.Views.AddSubscriptionPage"
+             Title="Add Subscription"
+             BackgroundColor="#D6D3D1"
+             Shell.BackgroundColor="#A1A1AA">
+    <ScrollView>
+        <StackLayout>
+        <StackLayout Margin="20,10,20,10">
+            <Frame BackgroundColor="White" Padding="20" CornerRadius="20">
+                <StackLayout>
+                        <HorizontalStackLayout Spacing="5">
+                            <StackLayout WidthRequest="20" HeightRequest="20" BackgroundColor="#CD7F32"></StackLayout>
+                            <Label Text="Bronze"
+                                   FontSize="24"
+                                   FontAttributes="Bold"/>
+                        </HorizontalStackLayout>
+                    <Label Text="- Discount: 10%"/>
+                    <Label Text="- Occasional promotional offers" />
+                    <Label Text="- Basic functionalities of our platform" />
+                    <Label Text="- Two times a month visit"/>
+                    <Label Text="Price: 30$" 
+                           FontSize="18"
+                           FontAttributes="Bold"/>
+                </StackLayout>
+            </Frame>
+            <Frame BackgroundColor="White" Padding="20" CornerRadius="20">
+                <StackLayout>
+                    <HorizontalStackLayout Spacing="5">
+                            <StackLayout WidthRequest="20" HeightRequest="20" BackgroundColor="Silver"></StackLayout>
+                            <Label Text="Silver"
+                                   FontSize="24"
+                                   FontAttributes="Bold"/>
+                    </HorizontalStackLayout>
+                    <Label Text="- Discount: 20%"/>
+                    <Label Text="- All functionalities from the Bronze package" />
+                    <Label Text="- Faster customer support" />
+                    <Label Text="- Three times a month visit"/>
+                    <Label Text="Price: 55$" 
+                           FontSize="18"
+                           FontAttributes="Bold"/>
+                </StackLayout>
+            </Frame>
+            <Frame BackgroundColor="White" Padding="20" CornerRadius="20">
+                <StackLayout>
+                     <HorizontalStackLayout Spacing="5">
+                            <StackLayout WidthRequest="20" HeightRequest="20" BackgroundColor="Gold"></StackLayout>
+                            <Label Text="Gold"
+                                   FontSize="24"
+                                   FontAttributes="Bold"/>
+                     </HorizontalStackLayout>
+                     <Label Text="- Discount: 30%"/>
+                    <Label Text="- Everything from the Bronze and Silver packages" />
+                    <Label Text="- Direct contact with our experts" />
+                    <Label Text="- Additional bonuses and gifts" />
+                    <Label Text="- Four times a month visit"/>
+                    <Label Text="Price: 80$" 
+                           FontSize="18"
+                           FontAttributes="Bold"/>
+                </StackLayout>
+            </Frame>
+        </StackLayout>
+        <VerticalStackLayout Margin="20,0,20,0">
+            <Label Text="Choose a subscription:" 
+                   HorizontalTextAlignment="Center"
+                   FontSize="18"
+                   FontAttributes="Bold"/>
+            <Picker x:Name="optionGroupSubscription">
+                <Picker.Items>
+                    <x:String>Bronze</x:String>
+                    <x:String>Silver</x:String>
+                    <x:String>Gold</x:String>
+                </Picker.Items>
+            </Picker>
+        </VerticalStackLayout>
+        <Button Text="Submit Subscription" Clicked="OnSubscriptionSubmitClicked"
+                BackgroundColor="#133A1B"
+                FontSize="20"
+                FontAttributes="Bold"
+                CornerRadius="20"
+                Margin="80,20,80,20"/>
+        </StackLayout>
+    </ScrollView>
+</ContentPage>

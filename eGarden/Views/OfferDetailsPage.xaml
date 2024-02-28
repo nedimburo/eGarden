@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="eGarden.Views.OfferDetailsPage"
+             Title="Offer Details"
+             BackgroundColor="#D6D3D1"
+             Shell.BackgroundColor="#A1A1AA">
+    <ScrollView>
+        <StackLayout>
+            <StackLayout>
+                <Image x:Name="Image"/>
+            </StackLayout>
+            <Frame>
+                <StackLayout Spacing="5">
+                    <Label x:Name="Title"
+                           HorizontalOptions="Center"
+                           FontSize="22"
+                           FontAttributes="Bold"/>
+                    <Label x:Name="Description"
+                           HorizontalOptions="Center"
+                           FontAttributes="Italic"/>
+                    <HorizontalStackLayout HorizontalOptions="Center">
+                        <Label Text="Price: "
+                               FontSize="24"
+                               FontAttributes="Bold"/>
+                        <Label x:Name="Price"
+                               FontSize="24"
+                               FontAttributes="Bold"/>
+                        <Label Text=" $"
+                               FontSize="24"
+                               FontAttributes="Bold"/>
+                    </HorizontalStackLayout>
+                </StackLayout>
+            </Frame>
+        </StackLayout>
+    </ScrollView>
+</ContentPage>

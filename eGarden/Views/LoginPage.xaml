@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="eGarden.Views.LoginPage"
+             Title="Login"
+             BackgroundColor="#D6D3D1"
+             Shell.BackgroundColor="#A1A1AA">
+    <StackLayout Margin="20,150,20,10">
+        <Frame BackgroundColor="White" Padding="20" CornerRadius="20">
+            <StackLayout>
+                <VerticalStackLayout>
+                    <Label Text="Email: " 
+                           FontSize="18"
+                           FontAttributes="Bold"/>
+                    <Entry Placeholder="Enter Email here" x:Name="EmailEntry" 
+                            PlaceholderColor="#011B10"/>
+                </VerticalStackLayout>
+                <VerticalStackLayout>
+                    <Label Text="Password: " 
+                           FontSize="18"
+                           FontAttributes="Bold"/>
+                    <Entry Placeholder="Enter Password here" x:Name="PasswordEntry" IsPassword="True" 
+                            PlaceholderColor="#011B10"/>
+                </VerticalStackLayout>
+                <Button Text="Login" Clicked="OnLoginClicked"
+                        BackgroundColor="#133A1B"
+                        FontSize="20"
+                        FontAttributes="Bold"
+                        CornerRadius="20"
+                        Margin="80,20,80,0"/>
+            </StackLayout>
+        </Frame>
+        
+    </StackLayout>
+</ContentPage>

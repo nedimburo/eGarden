@@ -1,0 +1,137 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="eGarden.Views.CreateRequestPage"
+             Title="Create Request"
+             BackgroundColor="#D6D3D1"
+               Shell.BackgroundColor="#A1A1AA">
+    <ScrollView Margin="20">
+        <StackLayout Spacing="10">
+            <Frame BackgroundColor="White" Padding="20" CornerRadius="20">
+                <StackLayout>
+                    <Label Text="Select an Option:" 
+                           FontSize="18"
+                           FontAttributes="Bold"/>
+                    <Picker x:Name="optionPicker" SelectedIndexChanged="SelectedOptionIndex">
+                        <Picker.Items>
+                            <x:String>Allow Agency to do all the work</x:String>
+                            <x:String>Make your own request</x:String>
+                        </Picker.Items>
+                    </Picker>
+                </StackLayout>
+            </Frame>
+
+            <StackLayout x:Name="option1Layout" IsVisible="False">
+                <Frame BackgroundColor="White" Padding="20" CornerRadius="20">
+                    <StackLayout>
+                        <Label Text="Enter Budget:" 
+                               FontSize="18"
+                               FontAttributes="Bold"/>
+                        <Entry x:Name="budgetEntry" />
+                    </StackLayout>
+                </Frame>
+            </StackLayout>
+
+            <StackLayout x:Name="option2Layout" IsVisible="False" Spacing="10">
+                <Frame BackgroundColor="White" Padding="20" CornerRadius="20">
+                    <StackLayout>
+                        <Label Text="Maintenance Options:" 
+                               FontSize="18"
+                               FontAttributes="Bold"/>
+                        <StackLayout x:Name="maintenanceOptions">
+                            <RadioButton Content="Basic (25$)" x:Name="maintenanceOptionBasic" CheckedChanged="MaintenanceOption_CheckedChanged" />
+                            <RadioButton Content="Advanced (45$)" x:Name="maintenanceOptionAdvanced" CheckedChanged="MaintenanceOption_CheckedChanged" />
+                            <RadioButton Content="Pro (75$)" x:Name="maintenanceOptionPro" CheckedChanged="MaintenanceOption_CheckedChanged" />
+                        </StackLayout>
+                    </StackLayout>
+                </Frame>
+
+                <Frame BackgroundColor="White" Padding="20" CornerRadius="20">
+                    <StackLayout>
+                        <Label Text="Decoration Options:" 
+                               FontSize="18"
+                               FontAttributes="Bold"/>
+                        <StackLayout x:Name="decorationOptions">
+                            <RadioButton Content="Rose Package (120$)" x:Name="decorationOptionRose" CheckedChanged="DecorationOption_CheckedChanged" />
+                            <RadioButton Content="Small Trees Package (450$)" x:Name="decorationOptionSmallTrees" CheckedChanged="DecorationOption_CheckedChanged" />
+                            <RadioButton Content="Evergreen Plants Package (250$)" x:Name="decorationOptionEvergreen" CheckedChanged="DecorationOption_CheckedChanged" />
+                            <RadioButton Content="Mix Package (850$)" x:Name="decorationOptionMix" CheckedChanged="DecorationOption_CheckedChanged" />
+                        </StackLayout>
+                    </StackLayout>
+                </Frame>
+
+                <Frame BackgroundColor="White" Padding="20" CornerRadius="20">
+                    <StackLayout>
+                        <Label Text="Layout Options:" 
+                               FontSize="18"
+                               FontAttributes="Bold"/>
+                        <StackLayout x:Name="layoutOptions">
+                            <RadioButton Content="Style O (50$)" x:Name="layoutOptionStyleO" CheckedChanged="LayoutOption_CheckedChanged" />
+                            <RadioButton Content="Style U (40$)" x:Name="layoutOptionStyleU" CheckedChanged="LayoutOption_CheckedChanged" />
+                            <RadioButton Content="Sides (70$)" x:Name="layoutOptionSides" CheckedChanged="LayoutOption_CheckedChanged" />
+                            <RadioButton Content="All Around (100$)" x:Name="layoutOptionAllAround" CheckedChanged="LayoutOption_CheckedChanged" />
+                            <RadioButton Content="Whole Area (150$)" x:Name="layoutOptionWholeArea" CheckedChanged="LayoutOption_CheckedChanged" />
+                        </StackLayout>
+                    </StackLayout>
+                </Frame>
+            </StackLayout>
+
+            <StackLayout x:Name="paymentContainer">
+                <Frame BackgroundColor="White" Padding="20" CornerRadius="20">
+                    <StackLayout>
+                        <Label Text="Payment Method:" 
+                               FontSize="18"
+                               FontAttributes="Bold"/>
+                        <Picker x:Name="paymentMethodPicker">
+                            <Picker.Items>
+                                <x:String>Online</x:String>
+                                <x:String>Cash</x:String>
+                            </Picker.Items>
+                        </Picker>
+                    </StackLayout>
+                </Frame>
+            </StackLayout>
+
+            <Frame BackgroundColor="White" Padding="20" CornerRadius="20">
+                <StackLayout>
+                    <VerticalStackLayout>
+                        <Label Text="City:" 
+                               FontSize="18"
+                               FontAttributes="Bold"/>
+                        <Entry Placeholder="Enter City here" x:Name="City"
+                             PlaceholderColor="#011B10"/>
+                    </VerticalStackLayout>
+                    <VerticalStackLayout>
+                        <Label Text="Address:" 
+                               FontSize="18"
+                               FontAttributes="Bold"/>
+                        <Entry Placeholder="Enter Address here" x:Name="Address"
+                            PlaceholderColor="#011B10"/>
+                    </VerticalStackLayout>
+                    <VerticalStackLayout>
+                        <Label Text="Country:" 
+                               FontSize="18"
+                               FontAttributes="Bold"/>
+                        <Entry Placeholder="Enter Country here" x:Name="Country"
+                       PlaceholderColor="#011B10"/>
+                    </VerticalStackLayout>
+                </StackLayout>
+            </Frame>
+
+            <HorizontalStackLayout x:Name="costContainer" IsVisible="False">
+                <Label Text="Overall Cost: " 
+                       FontSize="18"
+                       FontAttributes="Bold"/>
+                <Label x:Name="overallCostLabel" Text="$0" 
+                       FontSize="18"
+                       FontAttributes="Bold"/>
+            </HorizontalStackLayout>
+            <Button Text="Submit Request" Clicked="OnSubmitRequestClicked"
+                    BackgroundColor="#133A1B"
+                    FontSize="20"
+                    FontAttributes="Bold"
+                    CornerRadius="20"
+                    Margin="80,10,80,0"/>
+        </StackLayout>
+    </ScrollView>
+</ContentPage>

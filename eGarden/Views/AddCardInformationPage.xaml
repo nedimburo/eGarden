@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="eGarden.Views.AddCardInformationPage"
+             Title="Add Card Information"
+             BackgroundColor="#D6D3D1"
+             Shell.BackgroundColor="#A1A1AA">
+    <StackLayout Margin="20,100,20,0">
+        <Frame BackgroundColor="White" Padding="20" CornerRadius="20">
+            <StackLayout>
+                <VerticalStackLayout>
+                    <Label Text="Card Number: " 
+                           FontSize="18"
+                           FontAttributes="Bold"/>
+                    <Entry Placeholder="Enter Card Number here" x:Name="CardNumber" 
+                       PlaceholderColor="#011B10"/>
+                </VerticalStackLayout>
+                <VerticalStackLayout>
+                    <Label Text="PIN Code: "
+                           FontSize="18"
+                           FontAttributes="Bold"/>
+                    <Entry Placeholder="Enter PIN Code here" x:Name="PinCode"
+                       PlaceholderColor="#011B10"/>
+                </VerticalStackLayout>
+                <VerticalStackLayout>
+                    <Label Text="CVV: " 
+                           FontSize="18"
+                           FontAttributes="Bold"/>
+                    <Entry Placeholder="Enter CVV (3-digit) here" x:Name="ThreeDigitNumber" 
+                       PlaceholderColor="#011B10"/>
+                </VerticalStackLayout>
+                <VerticalStackLayout>
+                    <Label Text="Expiration Date: " 
+                           FontSize="18"
+                           FontAttributes="Bold"/>
+                    <DatePicker x:Name="ExpirationDate" />
+                </VerticalStackLayout>
+                <Button Text="Save Information" Clicked="OnSaveInformationClicked" 
+                        BackgroundColor="#133A1B"
+                        FontSize="20"
+                        FontAttributes="Bold"
+                        CornerRadius="20"
+                        Margin="80,20,80,0"/>
+            </StackLayout>
+        </Frame>
+    </StackLayout>
+</ContentPage>

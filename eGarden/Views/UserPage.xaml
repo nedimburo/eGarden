@@ -1,0 +1,239 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="eGarden.Views.UserPage"
+             Title="User Main Page"
+             BackgroundColor="#D6D3D1"
+             Shell.NavBarIsVisible="false">
+    <ScrollView>
+        <StackLayout>
+            <Frame BackgroundColor="White" Padding="20" CornerRadius="40" Margin="80,20,80,10">
+                <Image Source="egardenvecilogo.png"/>
+            </Frame>
+            <HorizontalStackLayout HorizontalOptions="Center">
+                <Label Text="Welcome, " 
+                       FontSize="18"
+                       FontAttributes="Bold"/>
+                <Label Text="{Binding Username}"
+                       FontSize="18"
+                       FontAttributes="Bold"/>
+            </HorizontalStackLayout>
+            <HorizontalStackLayout Margin="20,10,20,10" HorizontalOptions="Center" Spacing="10">
+                <Button Text="User Profile" Clicked="OnProfileClicked"
+                        BackgroundColor="#133A1B"
+                        FontSize="20"
+                        FontAttributes="Bold"
+                        CornerRadius="20"/>
+                <Button Text="LOGOUT" Clicked="OnLogoutClicked"
+                        BackgroundColor="#B91C1C"
+                        FontSize="20"
+                        FontAttributes="Bold"
+                        CornerRadius="20"/>
+            </HorizontalStackLayout>
+            
+            <Frame Margin="20,0,20,10" CornerRadius="50">
+                <Label Text="Maintenance Packages: "
+                       HorizontalOptions="Center"
+                       FontSize="18"
+                       FontAttributes="Bold"
+                       BackgroundColor="White"/>
+            </Frame>
+            <StackLayout Orientation="Vertical" Spacing="10" Margin="20,10,20,10">
+                <Frame>
+                    <StackLayout>
+                        <Image Source="maintenance1.png" WidthRequest="200"/>
+                        <Label Text="Basic Package"
+                               HorizontalTextAlignment="Center"
+                               FontAttributes="Bold"
+                               FontSize="18"
+                               Margin="0,5,0,5"/>
+                        <Button Text="Details"
+                                BackgroundColor="#133A1B"
+                                FontAttributes="Bold"
+                                CommandParameter="maint1"
+                                Clicked="OnDetailsClicked"/>
+                    </StackLayout>
+                </Frame>
+                <Frame>
+                    <StackLayout>
+                        <Image Source="maintenance2.png" WidthRequest="200"/>
+                        <Label Text="Advanced Package"
+                               HorizontalTextAlignment="Center"
+                               FontAttributes="Bold"
+                               FontSize="18"
+                               Margin="0,5,0,5"/>
+                        <Button Text="Details"
+                                BackgroundColor="#133A1B"
+                                FontAttributes="Bold"
+                                CommandParameter="maint2"
+                                Clicked="OnDetailsClicked"/>
+                    </StackLayout>
+                </Frame>
+                <Frame>
+                    <StackLayout>
+                        <Image Source="maintenance3.png" WidthRequest="200"/>
+                        <Label Text="Pro Package"
+                               HorizontalTextAlignment="Center"
+                               FontAttributes="Bold"
+                               FontSize="18"
+                               Margin="0,5,0,5"/>
+                        <Button Text="Details"
+                                BackgroundColor="#133A1B"
+                                FontAttributes="Bold"
+                                CommandParameter="maint3"
+                                Clicked="OnDetailsClicked"/>
+                    </StackLayout>
+                </Frame>
+            </StackLayout>
+            
+
+            <Frame Margin="20,0,20,10" CornerRadius="50">
+                <Label Text="Decoration Packages: "
+                       HorizontalOptions="Center"
+                       FontSize="18"
+                       FontAttributes="Bold"
+                       BackgroundColor="White"/>
+            </Frame>
+            <StackLayout Orientation="Horizontal" HorizontalOptions="CenterAndExpand" Margin="0,10,0,10" Spacing="10">
+                <Frame>
+                    <StackLayout>
+                        <Image Source="decoration1.png" WidthRequest="100"/>
+                        <Label Text="Rose Package"
+                               HorizontalTextAlignment="Center"
+                               FontAttributes="Bold"
+                               Margin="0,5,0,5"/>
+                        <Button Text="Details"
+                                BackgroundColor="#133A1B"
+                                FontAttributes="Bold"
+                                CommandParameter="deco1"
+                                Clicked="OnDetailsClicked"/>
+                    </StackLayout>
+                </Frame>
+                <Frame>
+                    <StackLayout>
+                        <Image Source="decoration2.png" WidthRequest="100"/>
+                        <Label Text="Small Trees Package"
+                               HorizontalTextAlignment="Center"
+                               FontAttributes="Bold"
+                               Margin="0,5,0,5"/>
+                        <Button Text="Details"
+                                BackgroundColor="#133A1B"
+                                FontAttributes="Bold"
+                                CommandParameter="deco2"
+                                Clicked="OnDetailsClicked"/>
+                    </StackLayout>
+                </Frame>
+            </StackLayout>
+            <StackLayout Orientation="Horizontal" HorizontalOptions="CenterAndExpand" Margin="0,10,0,10" Spacing="10">
+                <Frame>
+                    <StackLayout>
+                        <Image Source="decoration3.png" WidthRequest="100"/>
+                        <Label Text="Evergreen Plants Package"
+                               HorizontalTextAlignment="Center"
+                               FontAttributes="Bold"
+                               Margin="0,5,0,5"/>
+                        <Button Text="Details"
+                                BackgroundColor="#133A1B"
+                                FontAttributes="Bold"
+                                CommandParameter="deco3"
+                                Clicked="OnDetailsClicked"/>
+                    </StackLayout>
+                </Frame>
+                <Frame>
+                    <StackLayout>
+                        <Image Source="decoration4.png" WidthRequest="100"/>
+                        <Label Text="Mix Package"
+                               HorizontalTextAlignment="Center"
+                               FontAttributes="Bold"
+                               Margin="0,5,0,5"/>
+                        <Button Text="Details"
+                                BackgroundColor="#133A1B"
+                                FontAttributes="Bold"
+                                CommandParameter="deco4"
+                                Clicked="OnDetailsClicked"/>
+                    </StackLayout>
+                </Frame>
+            </StackLayout>
+            <Frame>
+                <StackLayout>
+                    <Label Text="Ready for your garden makeover? Make a request and our team will be in touch with you."
+                           HorizontalTextAlignment="Center"
+                           FontAttributes="Bold"
+                           Padding="0,0,0,10"/>
+                    <Button Text="Create Request" Clicked="OnCreateRequestClicked" 
+                            BackgroundColor="#133A1B"
+                            FontSize="20"
+                            FontAttributes="Bold"
+                            CornerRadius="20"/>
+                </StackLayout>
+            </Frame>
+            <StackLayout BackgroundColor="Black" HeightRequest="10"></StackLayout>
+            <Frame>
+                <StackLayout>
+                    <Label Text="Want to hire a worker yourself? Here is the page you can see all available workers that have signed up and listed their gardening skills."
+                           HorizontalTextAlignment="Center"
+                           FontAttributes="Bold"
+                           Padding="0,0,0,10"/>
+                    <Button Text="View Workers" Clicked="OnViewWorkersClicked"
+                            BackgroundColor="#133A1B"
+                            FontSize="20"
+                            FontAttributes="Bold"
+                            CornerRadius="20"/>
+                </StackLayout>
+            </Frame>
+            <StackLayout BackgroundColor="Black" HeightRequest="10"></StackLayout>
+            <Frame>
+                <StackLayout>
+                    <Label Text="At eGarden we offer monthly subscriptions that provide many additional goods and benefits. Check them out." 
+                           HorizontalTextAlignment="Center"
+                           FontAttributes="Bold"
+                           Padding="0,0,0,10"/>
+                    <Button Text="Register Subscription" Clicked="OnRegisterSubscriptionClicked"
+                            BackgroundColor="#133A1B"
+                            FontSize="20"
+                            FontAttributes="Bold"
+                            CornerRadius="20"/>
+                </StackLayout>
+            </Frame>
+            <Frame Margin="20,10,20,10" CornerRadius="50">
+                <Label Text="About Us: "
+                       HorizontalOptions="Center"
+                       FontSize="18"
+                       FontAttributes="Bold"
+                       BackgroundColor="White"/>
+            </Frame>
+            <Frame Margin="10,0,10,10">
+                <StackLayout>
+                    <Label Text="We are a dedicated team with the aim of making your life easier and enhancing green spaces. eGarden is an agency specializing in the design, maintenance, planting, and landscaping of various environments, offering a range of services for your gardens, yards, and green areas. We value nature and understand the importance of its preservation, knowing that when we take care of it, it takes care of us. As nature unfolds its beauty in spring and prepares for cold nights and mornings before winter, we are here to support it. Our goal is to help your plants flourish and protect them from harmful external influences. Your desires are our motivation."
+                           HorizontalTextAlignment="Center"
+                           FontAttributes="Bold"
+                           Padding="0,0,0,10"/>
+                    <Image Source="aboutus.jpg"/>
+                </StackLayout>
+            </Frame>
+            <StackLayout HorizontalOptions="Center" BackgroundColor="White" Padding="0,5,0,10">
+                <Image Source="egardenvecilogo.png" Margin="130,10,130,10"/>
+                <Label Text="Contact Us:"
+                       FontSize="24"
+                       FontAttributes="Bold"
+                       HorizontalTextAlignment="Center"/>
+                <Label Text="Email: eGarden@gmail.com"
+                       FontSize="18"
+                       FontAttributes="Bold"
+                       HorizontalTextAlignment="Center"/>
+                <Label Text="Telephone: 060-111-111"
+                       FontSize="18"
+                       FontAttributes="Bold"
+                       HorizontalTextAlignment="Center"/>
+                <Label Text="Talica brdo 1, Zenica"
+                       FontSize="18"
+                       FontAttributes="Bold"
+                       HorizontalTextAlignment="Center"/>
+                <Label Text="Bosnia and Herzegovina"
+                       FontSize="18"
+                       FontAttributes="Bold"
+                       HorizontalTextAlignment="Center"/>
+            </StackLayout>
+        </StackLayout>
+    </ScrollView>
+</ContentPage>

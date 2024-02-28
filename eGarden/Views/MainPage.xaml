@@ -1,0 +1,38 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="eGarden.MainPage"
+             BackgroundImageSource="background.jpg"
+             Shell.NavBarIsVisible="false">
+
+    <StackLayout>
+        <Frame BackgroundColor="#B7BF96" Padding="20" CornerRadius="40" Margin="80,20,80,10">
+            <Image Source="egardenvecilogo.png"/>
+        </Frame>
+        <Label Text="Welcome!" 
+               TextColor="#011B10"
+               FontAttributes="Bold"
+               HorizontalTextAlignment="Center"
+               FontSize="26"
+               Margin="0,0,0,50"/>
+        <Label Text="Start decorating your garden, never faster and easier" 
+               TextColor="#011B10"
+               FontAttributes="Bold"
+               HorizontalTextAlignment="Center"
+               FontSize="20"
+               Margin="0,0,0,40"/>
+        <StackLayout Margin="80,0,80,0" Spacing="10">
+            <Button Text="Login" Clicked="OnLoginClicked" 
+                    BackgroundColor="#133A1B"
+                    FontSize="20"
+                    FontAttributes="Bold"
+                    CornerRadius="20"/>
+            <Button Text="Register" Clicked="OnRegisterClicked" 
+                    BackgroundColor="#011B10"
+                    FontSize="20"
+                    FontAttributes="Bold"
+                    CornerRadius="20"/>
+        </StackLayout>
+    </StackLayout>
+
+</ContentPage>
